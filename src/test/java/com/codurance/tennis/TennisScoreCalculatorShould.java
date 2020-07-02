@@ -52,4 +52,9 @@ public class TennisScoreCalculatorShould {
   void return_advantage_player1_for_4_3() {
     assertEquals("Advantage John", tennisScoreCalculator.score(4, 3));
   }
+
+  @Test
+  void return_player1_wins_for_5_3() {
+    assertEquals("Game John", tennisScoreCalculator.score(5, 3));
+  }
 }

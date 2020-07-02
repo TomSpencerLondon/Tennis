@@ -34,6 +34,13 @@ public class TennisScoreCalculator {
         result.append("Advantage " );
         result.append(player2);
       }
+    }else if((player1Score > 3 || player2Score > 3) && (abs(player1Score - player2Score) > 1)){
+      result.append("Game ");
+      if(player1Score > player2Score){
+        result.append(player1);
+      }else {
+        result.append(player2);
+      }
     }else{
       result.append(scores.get(player1Score));
       result.append(", ");
