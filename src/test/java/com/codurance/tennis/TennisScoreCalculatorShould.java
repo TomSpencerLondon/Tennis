@@ -32,4 +32,19 @@ public class TennisScoreCalculatorShould {
   void return_forty_all_for_3_3() {
     assertEquals("Forty all", tennisScoreCalculator.score(3, 3));
   }
+
+  @Test
+  void return_forty_thirty_for_3_2() {
+    assertEquals("Forty, Thirty", tennisScoreCalculator.score(3, 2));
+  }
+
+  @Test
+  void return_thirty_fifteen_for_2_1() {
+    assertEquals("Thirty, Fifteen", tennisScoreCalculator.score(2, 1));
+  }
+
+  @Test
+  void return_thirty_forty_for_2_3() {
+    assertEquals("Thirty, Forty", tennisScoreCalculator.score(2, 3));
+  }
 }

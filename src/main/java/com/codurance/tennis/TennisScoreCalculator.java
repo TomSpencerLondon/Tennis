@@ -17,6 +17,10 @@ public class TennisScoreCalculator {
     if(player1 == player2){
       result.append(scores.get(player1));
       result.append(" all");
+    }else{
+      result.append(scores.get(player1));
+      result.append(", ");
+      result.append(scores.get(player2));
     }
 
     return result.toString();
