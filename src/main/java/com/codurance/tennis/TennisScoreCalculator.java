@@ -1,29 +1,25 @@
 package com.codurance.tennis;
 
+import java.util.HashMap;
+
 public class TennisScoreCalculator {
+  HashMap<Integer, String> scores = new HashMap<Integer, String>();
+
+  public TennisScoreCalculator() {
+    this.scores.put(0, "Love");
+    this.scores.put(1, "Fifteen");
+    this.scores.put(2, "Thirty");
+    this.scores.put(3, "Forty");
+  }
 
   public String score(int player1, int player2) {
-    StringBuilder stringBuilder = new StringBuilder();
-    for (Score score : Score.values()) {
-      if (player1 == score.input) {
-        stringBuilder.append(score.output);
-      }
+    StringBuilder result = new StringBuilder();
+    if(player1 == player2){
+      result.append(scores.get(player1));
+      result.append(" all");
     }
-    return stringBuilder.append(" all").toString();
+
+    return result.toString();
   }
 
-  private enum Score {
-    LOVE(0, "Love"),
-    FIFTEEN(1, "Fifteen"),
-    THIRTY(2, "Thirty"),
-    FORTY(3, "Forty");
-
-    private final int input;
-    private final String output;
-
-    Score(int input, String output) {
-      this.input = input;
-      this.output = output;
-    }
-  }
 }
