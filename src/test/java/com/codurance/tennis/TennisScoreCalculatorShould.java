@@ -10,7 +10,7 @@ public class TennisScoreCalculatorShould {
 
   @BeforeEach
   void setUp() {
-    tennisScoreCalculator = new TennisScoreCalculator();
+    tennisScoreCalculator = new TennisScoreCalculator("John", "Alice");
   }
 
   @Test
@@ -46,5 +46,10 @@ public class TennisScoreCalculatorShould {
   @Test
   void return_thirty_forty_for_2_3() {
     assertEquals("Thirty, Forty", tennisScoreCalculator.score(2, 3));
+  }
+
+  @Test
+  void return_advantage_player1_for_4_3() {
+    assertEquals("Advantage John", tennisScoreCalculator.score(4, 3));
   }
 }
