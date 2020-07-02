@@ -14,9 +14,11 @@ public class TennisScoreCalculator {
 
   public String score(int player1, int player2) {
     StringBuilder result = new StringBuilder();
-    if(player1 == player2){
+    if(player1 == player2 && player1 < 3){
       result.append(scores.get(player1));
       result.append(" all");
+    }else if(player1 == player2){
+      result.append("Deuce");
     }else{
       result.append(scores.get(player1));
       result.append(", ");

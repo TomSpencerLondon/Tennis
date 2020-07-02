@@ -30,7 +30,7 @@ public class TennisScoreCalculatorShould {
 
   @Test
   void return_forty_all_for_3_3() {
-    assertEquals("Forty all", tennisScoreCalculator.score(3, 3));
+    assertEquals("Deuce", tennisScoreCalculator.score(3, 3));
   }
 
   @Test
